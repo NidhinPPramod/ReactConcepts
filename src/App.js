@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react";
+// import Employee from "./components/Employee";
+
+import Counter1 from "./components/Counter1";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [state, setState] = useState(false)
+
+    //
+    // const addCount = () => {
+    //     setCount(count + 1)
+    // }
+
+    // let emp = [{name: 'Nidhin', age: 15},
+    //     {name: 'Sai', age: 13},
+    // ]
+
+    return (
+        <div>
+
+            {/*{*/}
+            {/*    emp.map((obj) => {*/}
+            {/*        return (*/}
+            {/*            <Employee name={obj.name} age={obj.age}/>*/}
+            {/*        )*/}
+
+            {/*    })*/}
+            {/*}*/}
+            <button onClick={() => setState(!state)}>Show/Hide</button>
+            {state ? <Counter1/> : null}
+        </div>
+    );
 }
 
 export default App;
